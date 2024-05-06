@@ -130,7 +130,7 @@
 %     \pgfmathsetmacro\xchor{#1 + 0.5 * #2}
 %     \else % assume it's a letter
 %     \setcounter{hexletternum}{0}
-%     \foreach \hexletter in {a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z}{%
+%     \foreach \hexletter in {A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z}{%
 %         \addtocounter{hexletternum}{1}
 %         \IfEq{\hexletter}{#1}{\breakforeach}{}
 %     }
@@ -143,7 +143,7 @@
     \pgfmathsetmacro\xchor{#1 + 0.5 * (#2 - 1)}
     \else
     \setcounter{hexletternum}{0}
-    \foreach \hexletter in {a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z}{%
+    \foreach \hexletter in {A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z}{%
         \addtocounter{hexletternum}{1}
         \IfEq{\hexletter}{#1}{\breakforeach}{}
     }
@@ -345,7 +345,7 @@
         \pgfmathsetmacro\leftofIa{\Ia-0.5}
         \pgfmathsetmacro\belowIa{1-1/sqrt(3)-0.2}
         \ifnum\value{hexedge}<27
-        \node[scale=0.3] at (\leftofIa em,\belowIa em) {{\sf\color{\colorA}\alph{hexedge}}};
+        \node[scale=0.3] at (\leftofIa em,\belowIa em) {{\sf\color{\colorA}\Alph{hexedge}}};
         \else
         \node[scale=0.3] at (\leftofIa em,\belowIa em) {{\sf\color{\colorA}\arabic{hexedge}}};
         \fi
